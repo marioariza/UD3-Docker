@@ -1,7 +1,7 @@
-version: "3.1"
+version: "3.8"
 services:
     www:
-        build: .
+        image: php:8.1-apache
         ports: 
             - "80:80"
         volumes:
@@ -17,7 +17,7 @@ services:
         command: --default-authentication-plugin=mysql_native_password
         environment:
             MYSQL_DATABASE: dbname
-            MYSQL_USER: root
+            MYSQL_USER: grupo2
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test 
         volumes:
