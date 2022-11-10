@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Welcome to LAMP Infrastructure</title>
+        <title>Alumnos Futboleros</title>
         <meta charset="utf-8"> 
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -8,23 +8,15 @@
     <body>
         <div class="container-fluid">
             <?php
-                echo "<h1>¡Hola, OpenWebinars te da la bienvenida!</h1>";
+                echo "<h1>Esto es un resumen de nuestros alumnos futboleros:</h1>";
 
-                $conn = mysqli_connect('db', 'root', 'test', "dbname");
-                $query = 'SELECT * From Data';
+                $conn = mysqli_connect('db', 'grupo2', 'test', "dbname");
+                $query = 'SELECT * FROM user_futbol';
                 $result = mysqli_query($conn, $query);
 
                 echo '<table class="table table-striped">';
                 echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
-                while($value = $result->fetch_array(MYSQLI_ASSOC)){
-                    echo '<tr>';
-                    echo '<td><a href="#"><span class="glyphicon glyphicon-search"></span></a></td>';
-                    foreach($value as $element){
-                        echo '<td>' . $element . '</td>';
-                    }
-
-                    echo '</tr>';
-                }
+                
                 echo '</table>';
 
                 $result->close();
