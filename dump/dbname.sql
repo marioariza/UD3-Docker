@@ -12,7 +12,7 @@ CREATE TABLE `user_futbol` (
   `surname` varchar(255) NOT NULL,
   `edad` int(3) NOT NULL,
   `equipo` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `user_futbol` (`id`, `name`, `surname`, `edad`, `equipo`) VALUES ('Fran', 'García Pozuelo', 20, 'Sevilla'), ('Manuel', 'Moya Vadillo', 19, 'Real Madrid');
 
