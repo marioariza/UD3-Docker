@@ -6,12 +6,15 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-CREATE TABLE `Data` (
-  `id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL
+CREATE TABLE `user_futbol` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(255) NOT NULL,
+  `surname` varchar(255) NOT NULL,
+  `edad` int(3) NOT NULL,
+  `equipo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `Data` (`id`, `name`) VALUES (1, 'OpenWebinars Article'), (2, 'Crashell'), (3, 'Jerson Martinez'), (4, 'Antonio Moreno');
+INSERT INTO `Data` (`id`, `name`, `surname`, `edad`, `equipo`) VALUES ('Fran', 'García Pozuelo', 20, 'Sevilla'), ('Manuel', 'Moya Vadillo', 19, 'Real Madrid');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
