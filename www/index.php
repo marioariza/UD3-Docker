@@ -10,17 +10,20 @@
             <?php
                 echo "<h1>Esto es un resumen de nuestros alumnos futboleros:</h1>";
 
-                $conn = mysqli_connect('db', 'grupo2', 'test', "dbname");
+                $conn = mysqli_connect('db', 'grupo2', 'test', 'dbname');
                 $query = 'SELECT * FROM user_futbol';
                 $result = mysqli_query($conn, $query);
+                ?>
 
-                echo '<table class="table table-striped">';
-                echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
-                
-                echo '</table>';
+                <td><?php $row['id'] ?></td>
+                <td><?php $row['name'] ?></td>
+                <td><?php $row['surname'] ?></td>
+                <td><?php $row['edad'] ?></td>
+                <td><?php $row['equipo'] ?></td>
 
-                $result->close();
-                mysqli_close($conn);
+            <?php 
+            $result->close();
+            mysqli_close($conn); 
             ?>
         </div>
     </body>
