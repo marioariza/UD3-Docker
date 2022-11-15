@@ -7,10 +7,12 @@
     </head>
     <body>
         <div class="container-fluid">
+            <h1>Esto es un resumen de nuestros alumnos futboleros:</h1>
             <?php
-                echo "<h1>Esto es un resumen de nuestros alumnos futboleros:</h1>";
 
-                $conn = mysqli_connect('db', 'grupo2', 'test', 'dbname');
+                $conn = mysqli_connect("localhost", "grupo2", "test", "dbname");
+                
+
                 $query = 'SELECT * FROM user_futbol';
                 $result = mysqli_query($conn, $query);
                 ?>
