@@ -10,7 +10,7 @@
             <?php
                 echo "<h1>¡Hola, OpenWebinars te da la bienvenida!</h1>";
 
-                $conn = mysqli_connect('db', 'manu', 'test', "dbname");
+                $conn = mysqli_connect('db', 'grupo2', 'test', "dbname");
                 $query = 'SELECT * From Data';
                 $result = mysqli_query($conn, $query);
 
