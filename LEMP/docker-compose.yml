@@ -1,15 +1,9 @@
 version: "3.8"
 services:
     www:
-<<<<<<< HEAD:LEMP/docker-compose.yml
         image: nginx
-=======
-        image: php:8.1-apache
-        # command: docker-php-ext-install pdo pdo_mysql mysqli
->>>>>>> 77e7fd907c926317e31ea8ea8417b22158470cf2:docker-compose.yml
         ports: 
             - "80:80"
-        command: "docker-php-ext-install mysqli"
         volumes:
             - ./www:/var/www/html
         links:
@@ -23,11 +17,7 @@ services:
         command: --default-authentication-plugin=mysql_native_password
         environment:
             MYSQL_DATABASE: dbname
-<<<<<<< HEAD:LEMP/docker-compose.yml
-            MYSQL_USER: manu
-=======
             MYSQL_USER: grupo2
->>>>>>> 77e7fd907c926317e31ea8ea8417b22158470cf2:docker-compose.yml
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test 
         volumes:

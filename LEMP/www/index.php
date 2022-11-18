@@ -10,15 +10,8 @@
             <h1>Esto es un resumen de nuestros alumnos futboleros:</h1>
             <?php
 
-<<<<<<< HEAD:LEMP/www/index.php
-                $conn = mysqli_connect('db', 'manu', 'test', "dbname");
-                $query = 'SELECT * From Data';
-=======
                 $conn = mysqli_connect("db", "grupo2", "test", "dbname");
-                
-
                 $query = 'SELECT * FROM user_futbol';
->>>>>>> 77e7fd907c926317e31ea8ea8417b22158470cf2:www/index.php
                 $result = mysqli_query($conn, $query);
                 ?>
 
